@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        *{
+            cursor: url(imagens/mata_mosca.png) 16 16, auto;
+        }
+
+         body{
+           font-family: Arial, Helvetica, sans-serif; 
+           background-image: url(imagens/bg.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        #reiniciar{
+            background-color: #1F2226;
+            color: white;
+            font-size: 18px;
+            width: 10%;
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <img src="imagens/vitoria.png">
+    </div>
+    <div>
+        <button onclick="retornaInicio()" id="reiniciar">Reiniciar</button>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>

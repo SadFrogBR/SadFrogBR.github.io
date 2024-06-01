@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+         body{
+           font-family: Arial, Helvetica, sans-serif; 
+           background-image: url(imagens/bg.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+           margin: 0;
+        }
+
+        #quadrado{
+            background-color: white;
+            width: 16%;
+            height: 9%;
+            position: fixed;
+            padding: 5px;
+            margin: 0;
+            bottom: 0;
+        }
+
+        div{
+            font-weight: 300;
+        }
+
+        *{
+            cursor: url(imagens/mata_mosca.png) 16 16, auto;
+        }
+
+
+    </style>
+
+<script src="jogo.js"></script>
+
+    
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+    
+    <audio id="audio" src="musicas/porretada.mp3"></audio>
+
+
+    <div id="quadrado">
+        <span id="vida">
+            <img id="1" src="imagens/coracao_cheio.png"> 
+            <img id="2" src="imagens/coracao_cheio.png"> 
+            <img id="3" src="imagens/coracao_cheio.png"> <br>
+        </span>
+        Tempo restante: 
+        <span id="variavel"></span>
+    </div>
+    
+    <script>
+        obterDificuldade()
+    </script>
+    
+</body>
+</html>
