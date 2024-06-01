@@ -56,7 +56,7 @@
 
 </head>
 <body>
-    <audio id="audio" src="musicas/musica.mp3" autoplay loop volume="0.5"></audio>
+    <audio id="jojo" src="musicas/musica.mp3" autoplay loop volume="0.5"></audio>
     <div class="center">
         <div>
             <img id="nomeJogo" src="imagens/game.png">
@@ -74,7 +74,7 @@
     </div>
 
     <script>
-
+        document.getElementById('jojo').play()
         function inciaJogo(){
             var nivel = document.getElementById('dificuldade').value
             
