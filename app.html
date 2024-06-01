@@ -15,6 +15,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
+            padding: 0;
         }
 
         #quadrado {
@@ -40,16 +41,14 @@
     <audio id="audio" src="musicas/porretada.mp3"></audio>
 
     <div class="container">
-        <div class="row justify-content-center">
-            <div id="quadrado" class="col-md-6 col-lg-4">
-                <span id="vida">
-                    <img id="1" src="imagens/coracao_cheio.png"> 
-                    <img id="2" src="imagens/coracao_cheio.png"> 
-                    <img id="3" src="imagens/coracao_cheio.png"> <br>
-                </span>
-                <span>Tempo restante:</span> 
-                <span id="variavel"></span>
-            </div>
+        <div id="quadrado">
+            <span id="vida">
+                <img id="1" src="imagens/coracao_cheio.png"> 
+                <img id="2" src="imagens/coracao_cheio.png"> 
+                <img id="3" src="imagens/coracao_cheio.png"> <br>
+            </span>
+            <span>Tempo restante:</span> 
+            <span id="variavel"></span>
         </div>
     </div>
     
