@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+    
+    <!-- Integração do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <style>
-         body{
-           font-family: Arial, Helvetica, sans-serif; 
-           background-image: url(imagens/bg.jpg);
-           background-repeat: no-repeat;
-           background-size: cover;
-           margin: 0;
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+            background-image: url(imagens/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
         }
 
-        #quadrado{
+        #quadrado {
             background-color: white;
             width: 16%;
             height: 9%;
@@ -23,39 +27,42 @@
             bottom: 0;
         }
 
-        div{
+        div {
             font-weight: 300;
         }
 
-        *{
+        * {
             cursor: url(imagens/mata_mosca.png) 16 16, auto;
         }
-
-
     </style>
-
-<script src="jogo.js"></script>
-
     
+    <script src="jogo.js"></script>
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
     
     <audio id="audio" src="musicas/porretada.mp3"></audio>
 
-
-    <div id="quadrado">
-        <span id="vida">
-            <img id="1" src="imagens/coracao_cheio.png"> 
-            <img id="2" src="imagens/coracao_cheio.png"> 
-            <img id="3" src="imagens/coracao_cheio.png"> <br>
-        </span>
-        Tempo restante: 
-        <span id="variavel"></span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div id="quadrado" class="col-md-4">
+                <span id="vida">
+                    <img id="1" src="imagens/coracao_cheio.png"> 
+                    <img id="2" src="imagens/coracao_cheio.png"> 
+                    <img id="3" src="imagens/coracao_cheio.png"> <br>
+                </span>
+                Tempo restante: 
+                <span id="variavel"></span>
+            </div>
+        </div>
     </div>
     
     <script>
         obterDificuldade()
     </script>
     
+    <!-- Integração do jQuery (necessário para o Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Integração do Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
