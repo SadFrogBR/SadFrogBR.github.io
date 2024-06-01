@@ -4,94 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    
-    <!-- Integração do Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
     <style>
-        * {
+        *{
             cursor: url(imagens/mata_mosca.png) 16 16, auto;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif; 
-            background-image: url(imagens/bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
+        body{
+           font-family: Arial, Helvetica, sans-serif; 
+           background-image: url(imagens/bg.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+           
         }
     
-        #dificuldade {
-            width: 80%;
-            max-width: 300px; /* Limita a largura para telas maiores */
+        #dificuldade{
+            width: 15%;
             font-size: 1em;
             padding: 10px;
-            margin-bottom: 20px; /* Adiciona espaço entre os elementos */
-        }
 
-        #iniciaJogo {
+
+        }
+        #inciaJogo{
             background-color: red;
             color: white;
             border-style: none;
-            width: 50%;
-            max-width: 200px; /* Limita a largura para telas maiores */
+            width: 8%;
             font-size: 1em;
             padding: 10px;
+            
         }
 
-        div {
+
+        div{
             text-align: center;
+
         }
 
-        .center {
+        .center{
             padding: 5px;
         }
+
+
+
     </style>
     
     <script>
-        document.getElementById('jojo').play();
-        document.getElementById('jojo').play();
         
-        function iniciaJogo() {
-            var nivel = document.getElementById('dificuldade').value;
-            
-            if(nivel != '') {
-                window.location.href = "app.html?" + nivel;
-            } else {
-                alert('Selecione um nível para iniciar o jogo.');
-            }
-        }
+        
+
     </script>
 
 </head>
 <body>
-    <audio id="jojo" src="musicas/musica.mp3" autoplay loop volume="0.5"></audio>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="center">
-                    <div>
-                        <img id="nomeJogo" src="imagens/game.png">
-                    </div>
-        
-                    <select id="dificuldade" class="form-control">
-                        <option value="">-- Selecione um nível --</option>
-                        <option value="normal">Normal</option>
-                        <option value="dificil">Difícil</option>
-                        <option value="chucknores">Chucknores</option>
-                    </select>
-                </div>
-                <div class="center">
-                    <button onclick="iniciaJogo()" id="iniciaJogo" class="btn btn-primary">Iniciar Jogo</button>
-                </div>
-            </div>
+    <audio id="audio" src="musicas/cupid.mp3" autoplay volume="0.5"></audio>
+    <div class="center">
+        <div>
+            <img id="nomeJogo" src="imagens/game.png">
         </div>
+        
+        <select id="dificuldade">
+            <option value="">-- Selecione um nivel --</option>
+            <option value="normal">Normal</option>
+            <option value="dificil">Dificil</option>
+            <option value="chucknores">Chucknores</option>
+        </select>
     </div>
-    
-    <!-- Integração do jQuery (necessário para o Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Integração do Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="center">
+        <button onclick="inciaJogo()" id="inciaJogo">Iniciar Jogo</button>
+    </div>
+
+    <script>
+
+        function inciaJogo(){
+            var nivel = document.getElementById('dificuldade').value
+            
+            if(nivel != ''){
+                window.location.href = "app.html?" + nivel
+                
+            }else{
+                alert('Selecione um nivel para inciar o jogo')
+            }
+            
+        }</script>
+
 </body>
 </html>
